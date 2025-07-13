@@ -26,7 +26,7 @@
       font-size: 4rem;
       color: #fff;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       animation: fadeInDown 2s ease-out;
     }
 
