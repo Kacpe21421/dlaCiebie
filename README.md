@@ -19,6 +19,11 @@
       align-items: center;
       flex-direction: column;
       overflow: hidden;
+      <video autoplay muted loop id="bg-video">
+  <source src="tlo.mp4" type="video/mp4">
+  Twój przeglądarka nie obsługuje wideo 😢
+</video>
+
     }
 
     h1 {
