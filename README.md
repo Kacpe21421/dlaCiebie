@@ -64,7 +64,7 @@
 <body>
 
   <video autoplay muted loop id="bg-video">
-    <source src="9905539-hd_1920_1080_30fps.mp4" type="video/mp4">
+    <source src="9667142-hd_1920_1080_25fps.mp4" type="video/mp4">
     Twój przeglądarka nie obsługuje wideo 😢
   </video>
 
