@@ -1,8 +1,8 @@
 
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dla Ciebie ❤️</title>
   <style>
     * {
@@ -14,20 +14,9 @@
     html, body {
       height: 100%;
       font-family: 'Courier New', monospace;
+      background: black;
       color: white;
       overflow: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('Naszyjnik%20NST2118%20+%20Bransoletka%20BST1512CZ%20(4).gif') no-repeat center center fixed;
-      background-size: cover;
-      z-index: -1;
     }
 
     .centered-text {
@@ -35,21 +24,14 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       text-align: center;
       animation: fadeIn 2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    .typing {
-      border-right: .15em solid white;
       white-space: nowrap;
       overflow: hidden;
-      animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+      border-right: 2px solid white;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink-caret .75s step-end infinite;
     }
 
     @keyframes typing {
@@ -62,12 +44,15 @@
       50% { border-color: white; }
     }
 
-    .kotek {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      width: 120px;
-      z-index: 999;
+    @keyframes shoot {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(45deg);
+      }
+      100% {
+        transform: translateY(-200px) scale(0.5) rotate(360deg);
+        opacity: 0;
+      }
     }
 
     .heart {
@@ -100,47 +85,60 @@
       top: 0;
     }
 
-    @keyframes shoot {
-      0% {
-        opacity: 1;
-        transform: translateY(0) scale(1) rotate(45deg);
-      }
-      100% {
-        transform: translateY(-200px) scale(0.5) rotate(360deg);
-        opacity: 0;
-      }
+    .kotek-container {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      width: 140px;
+      z-index: 99;
+    }
+
+    .tenor-gif-embed {
+      width: 100%;
     }
   </style>
 </head>
 <body>
 
-  <div class="centered-text typing">
+  <!-- Tekst po środku -->
+  <div class="centered-text">
     Kocham Cię bardzo mocno ❤️
   </div>
 
-  <!-- Kotek z Tenora -->
-  <img src="https://media.tenor.com/Vb-FhRva98sAAAAi/actividades.gif" class="kotek" alt="kotek">
+  <!-- Kot z Tenora -->
+  <div class="kotek-container">
+    <div class="tenor-gif-embed"
+         data-postid="18114953134649251593"
+         data-share-method="host"
+         data-aspect-ratio="1.01633"
+         data-width="100%">
+      <a href="https://tenor.com/view/actividades-gif-18114953134649251593">Actividades Sticker</a> from 
+      <a href="https://tenor.com/search/actividades-stickers">Actividades Stickers</a>
+    </div>
+  </div>
 
+  <!-- Tenor script -->
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+  <!-- Serduszka lecące z kotka -->
   <script>
-    // Tworzenie serduszek z kotka
-    const kotek = document.querySelector('.kotek');
-
-    function shootHeart() {
+    function shootHeartFromKotek() {
+      const kotekContainer = document.querySelector('.kotek-container');
+      const rect = kotekContainer.getBoundingClientRect();
       const heart = document.createElement('div');
       heart.className = 'heart';
-      const rect = kotek.getBoundingClientRect();
-      heart.style.left = (rect.left + 60) + 'px';
-      heart.style.top = (rect.top + 30) + 'px';
+      heart.style.left = (rect.left + rect.width / 2) + 'px';
+      heart.style.top = (rect.top + rect.height / 2) + 'px';
       document.body.appendChild(heart);
 
       setTimeout(() => heart.remove(), 3000);
     }
 
-    setInterval(shootHeart, 700);
+    setInterval(shootHeartFromKotek, 700);
   </script>
-
 </body>
 </html>
+
 
 
 
