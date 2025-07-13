@@ -1,18 +1,22 @@
-<!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dla Ciebie ❤️</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Pacifico&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Fira+Code&display=swap');
 
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      background: radial-gradient(circle at center, #ffb6c1, #ff69b4, #ff1493);
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100%;
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
       overflow: hidden;
-      height: 100%;
       font-family: 'Fira Code', monospace;
       display: flex;
       justify-content: center;
@@ -20,15 +24,23 @@
       flex-direction: column;
     }
 
-    .typewriter {
-      font-size: 2.5rem;
+    h1 {
       color: white;
+      font-size: 2.2rem;
+      padding: 1rem;
       text-align: center;
+      animation: typing 4s steps(30, end), blink 0.8s step-end infinite;
       white-space: nowrap;
-      border-right: 3px solid #fff;
-      width: 0;
       overflow: hidden;
-      animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+      border-right: 3px solid white;
+      font-family: 'Pacifico', cursive;
+      transition: all 0.3s ease-in-out;
+    }
+
+    h1:hover {
+      color: yellow;
+      text-shadow: 0 0 15px #fff, 0 0 30px #f0f, 0 0 60px #ff0;
+      transform: scale(1.1);
     }
 
     @keyframes typing {
@@ -40,19 +52,13 @@
       50% { border-color: transparent }
     }
 
-    h1:hover {
-      color: #ff0;
-      text-shadow: 0 0 20px #fff, 0 0 30px #ff0;
-      transition: 0.3s ease-in-out;
-    }
-
     .heart {
       position: absolute;
       width: 20px;
       height: 20px;
       background: red;
       transform: rotate(45deg);
-      animation: float 10s infinite ease-in-out;
+      animation: float 10s linear infinite;
       opacity: 0.7;
     }
 
@@ -72,42 +78,26 @@
     }
 
     .heart::after {
-      left: -10px;
       top: 0;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(100vh) rotate(45deg);
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-10vh) rotate(45deg);
-        opacity: 0;
-      }
+      left: -10px;
     }
 
     canvas.confetti {
       position: fixed;
       top: 0;
       left: 0;
+      z-index: 10;
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: 100;
     }
   </style>
 </head>
 <body>
-
-  <div class="typewriter">Kocham Cię bardzo mocno! ❤️</div>
+  <h1>Kocham Cię bardzo mocno! ❤️</h1>
   <canvas class="confetti"></canvas>
 
   <script>
-    // Piszące się serca
     function createHeart() {
       const heart = document.createElement('div');
       heart.className = 'heart';
@@ -117,9 +107,8 @@
       setTimeout(() => heart.remove(), 10000);
     }
 
-    setInterval(createHeart, 200);
+    setInterval(createHeart, 300);
 
-    // Konfetti
     const canvas = document.querySelector('.confetti');
     const ctx = canvas.getContext('2d');
     let width = canvas.width = window.innerWidth;
@@ -162,5 +151,10 @@
       height = canvas.height = window.innerHeight;
     });
   </script>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/12/01/audio_bdb586728d.mp3?filename=romantic-piano-125997.mp3" type="audio/mpeg">
+  </audio>
 </body>
 </html>
+
