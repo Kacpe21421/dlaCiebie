@@ -1,9 +1,7 @@
 
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dla Ciebie ❤️</title>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Inter:wght@400;700&display=swap');
 
@@ -92,7 +90,7 @@
   </style>
 </head>
 <body>
-  <h1>Kocham cię bardzoo mocno ❤️</h1>
+  <h1>Kocham cię bardzoo ❤️</h1>
   <p>W całym internecie, na całym świecie – tylko Ty jesteś moim wszechświatem.</p>
 
   <script>
