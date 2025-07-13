@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dla Ciebie ❤️</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Pacifico&display=swap');
 
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      background: linear-gradient(-45deg, #ff4b91, #ff6ec4, #ff85a1, #ffb6c1);
-      background-size: 400% 400%;
-      animation: backgroundAnimation 10s ease infinite;
-      font-family: 'Pacifico', cursive;
+      background: radial-gradient(circle at center, #ffb6c1, #ff69b4, #ff1493);
       overflow: hidden;
+      height: 100%;
+      font-family: 'Fira Code', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
-    @keyframes backgroundAnimation {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    h1 {
-      font-size: 4rem;
+    .typewriter {
+      font-size: 2.5rem;
       color: white;
       text-align: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-shadow: 0 0 20px #ff1493, 0 0 40px #ff69b4;
-      animation: pulse 2s infinite, glowText 3s infinite;
+      white-space: nowrap;
+      border-right: 3px solid #fff;
+      width: 0;
+      overflow: hidden;
+      animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
     }
 
-    @keyframes pulse {
-      0%, 100% { transform: translate(-50%, -50%) scale(1); }
-      50% { transform: translate(-50%, -50%) scale(1.1); }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
     }
 
-    @keyframes glowText {
-      0% { text-shadow: 0 0 10px #ff69b4; }
-      50% { text-shadow: 0 0 30px #ff1493, 0 0 50px #ff69b4; }
-      100% { text-shadow: 0 0 10px #ff69b4; }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    h1:hover {
+      color: #ff0;
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff0;
+      transition: 0.3s ease-in-out;
     }
 
     .heart {
@@ -53,7 +52,7 @@
       height: 20px;
       background: red;
       transform: rotate(45deg);
-      animation: float 8s linear infinite;
+      animation: float 10s infinite ease-in-out;
       opacity: 0.7;
     }
 
@@ -67,8 +66,15 @@
       border-radius: 50%;
     }
 
-    .heart::before { top: -10px; left: 0; }
-    .heart::after { left: -10px; top: 0; }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
 
     @keyframes float {
       0% {
@@ -84,52 +90,54 @@
       }
     }
 
-    .confetti {
+    canvas.confetti {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
-      z-index: 99;
+      z-index: 100;
     }
   </style>
 </head>
 <body>
-  <h1>Kocham Cię bardzo mocno! ❤️</h1>
+
+  <div class="typewriter">Kocham Cię bardzo mocno! ❤️</div>
   <canvas class="confetti"></canvas>
 
   <script>
-    // Serduszka
+    // Piszące się serca
     function createHeart() {
       const heart = document.createElement('div');
       heart.className = 'heart';
       heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
+      heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
       document.body.appendChild(heart);
       setTimeout(() => heart.remove(), 10000);
     }
+
     setInterval(createHeart, 200);
 
     // Konfetti
     const canvas = document.querySelector('.confetti');
     const ctx = canvas.getContext('2d');
-    let w = canvas.width = window.innerWidth;
-    let h = canvas.height = window.innerHeight;
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
 
     const confetti = Array.from({ length: 150 }).map(() => ({
-      x: Math.random() * w,
-      y: Math.random() * h,
+      x: Math.random() * width,
+      y: Math.random() * height,
       r: Math.random() * 6 + 2,
       d: Math.random() * 10 + 10,
-      color: `hsl(${Math.random() * 360}, 100%, 75%)`,
+      color: `hsl(${Math.random() * 360}, 100%, 70%)`,
       tilt: Math.random() * 10 - 10,
       tiltAngleIncrement: Math.random() * 0.07 + 0.05,
       tiltAngle: 0
     }));
 
     function drawConfetti() {
-      ctx.clearRect(0, 0, w, h);
+      ctx.clearRect(0, 0, width, height);
       confetti.forEach(p => {
         p.tiltAngle += p.tiltAngleIncrement;
         p.y += (Math.cos(p.d) + 1 + p.r / 2) / 2;
@@ -148,9 +156,10 @@
     }
 
     drawConfetti();
+
     window.addEventListener('resize', () => {
-      w = canvas.width = window.innerWidth;
-      h = canvas.height = window.innerHeight;
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
     });
   </script>
 </body>
