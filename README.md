@@ -92,7 +92,7 @@
   </style>
 </head>
 <body>
-  <h1>Dla Ciebie, Skarbie ❤️</h1>
+  <h1>Kocham cię bardzooo mocnoo! ❤️</h1>
   <p>W całym internecie, na całym świecie – tylko Ty jesteś moim wszechświatem.</p>
 
   <script>
