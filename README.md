@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dla Ciebie ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -10,46 +12,54 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      height: 100%;
-      font-family: 'Courier New', monospace;
-      background: radial-gradient(circle at center, #1a1a1a, #000000);
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+      font-family: 'Dancing Script', cursive;
       overflow: hidden;
-      color: white;
+      position: relative;
+      animation: backgroundFade 10s infinite alternate;
     }
 
-    .centered-text {
+    @keyframes backgroundFade {
+      0% { background: linear-gradient(135deg, #ffafbd, #ffc3a0); }
+      50% { background: linear-gradient(135deg, #ffc3a0, #ffafbd); }
+      100% { background: linear-gradient(135deg, #ffafbd, #ffc3a0); }
+    }
+
+    .typing-text {
       position: absolute;
-      top: 45%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 6vw;
-      text-align: center;
+      font-size: 8vw;
+      color: white;
+      text-shadow: 2px 2px 10px #ff4081;
       white-space: nowrap;
       overflow: hidden;
-      border-right: 2px solid white;
+      border-right: 3px solid white;
       width: 0;
-      animation: typing 4s steps(40, end) forwards, blink-caret .75s step-end infinite;
+      animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
     }
 
     @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
+      from { width: 0; }
+      to { width: 100%; }
     }
 
     @keyframes blink-caret {
-      from, to { border-color: transparent }
+      from, to { border-color: transparent; }
       50% { border-color: white; }
     }
 
     .heart {
-      position: fixed;
+      position: absolute;
       width: 20px;
       height: 20px;
-      background: red;
+      background-color: red;
       transform: rotate(45deg);
-      animation: shoot 3s ease-out forwards;
-      z-index: 999;
+      animation: float 6s linear infinite;
+      opacity: 0.8;
     }
 
     .heart::before,
@@ -58,7 +68,7 @@
       position: absolute;
       width: 20px;
       height: 20px;
-      background: red;
+      background-color: red;
       border-radius: 50%;
     }
 
@@ -72,88 +82,42 @@
       top: 0;
     }
 
-    .kotek-container {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      width: 120px;
-      z-index: 99;
-    }
-
-    .gif2 {
-      position: fixed;
-      bottom: 20px;
-      right: 10px;
-      width: 140px;
-      z-index: 99;
-    }
-
-    .tenor-gif-embed {
-      width: 100%;
-    }
-
-    @keyframes background-fade {
-      0% { background: radial-gradient(circle at center, #1a1a1a, #000000); }
-      50% { background: radial-gradient(circle at center, #ff0077, #1a001a); }
-      100% { background: radial-gradient(circle at center, #1a1a1a, #000000); }
-    }
-
-    body {
-      animation: background-fade 8s infinite ease-in-out;
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh) rotate(45deg);
+        opacity: 0;
+      }
     }
 
     @media (max-width: 600px) {
-      .centered-text {
-        font-size: 8vw;
-        top: 40%;
+      .typing-text {
+        font-size: 10vw;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Tekst po środku -->
-  <div class="centered-text">
-    Kocham Cię bardzo mocno ❤️
-  </div>
+  <div class="typing-text">Kocham Cię bardzo mocno ❤️</div>
 
-  <!-- Kot z Tenora -->
-  <div class="kotek-container">
-    <div class="tenor-gif-embed"
-         data-postid="18114953134649251593"
-         data-share-method="host"
-         data-aspect-ratio="1.01633"
-         data-width="100%">
-      <a href="https://tenor.com/view/actividades-gif-18114953134649251593">Actividades Sticker</a> from 
-      <a href="https://tenor.com/search/actividades-stickers">Actividades Stickers</a>
-    </div>
-  </div>
-
-  <!-- Twój drugi gif -->
-  <img src="actividades (1).gif" alt="gif" class="gif2" />
-
-  <!-- Tenor script -->
-  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
-  <!-- Serduszka lecące z kotka -->
   <script>
-    function shootHeartFromKotek() {
-      const kotekContainer = document.querySelector('.kotek-container');
-      const rect = kotekContainer.getBoundingClientRect();
+    function createHeart() {
       const heart = document.createElement('div');
       heart.className = 'heart';
-      heart.style.left = (rect.left + rect.width / 2) + 'px';
-      heart.style.top = (rect.top + rect.height / 2) + 'px';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 2 + 4) + 's';
       document.body.appendChild(heart);
-
-      setTimeout(() => heart.remove(), 3000);
+      setTimeout(() => heart.remove(), 6000);
     }
 
-    setInterval(shootHeartFromKotek, 700);
+    setInterval(createHeart, 300);
   </script>
 </body>
 </html>
-
 
 
 
