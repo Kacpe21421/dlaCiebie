@@ -33,7 +33,7 @@
     p {
       font-size: 1.3rem;
       color: #fff;
-      max-width: 600px;
+      max-width: 500px;
       text-align: center;
       animation: fadeInUp 3s ease-out;
     }
