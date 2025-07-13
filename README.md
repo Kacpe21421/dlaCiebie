@@ -18,13 +18,15 @@
       overflow: hidden;
     }
 
-    video#bg-video {
+    body::before {
+      content: "";
       position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('Naszyjnik%20NST2118%20+%20Bransoletka%20BST1512CZ%20(4).gif') no-repeat center center fixed;
+      background-size: cover;
       z-index: -1;
     }
 
@@ -63,16 +65,12 @@
 </head>
 <body>
 
-  <video autoplay muted loop id="bg-video">
-    <source src="Naszyjnik NST2118 + Bransoletka BST1512CZ (4).gif" type="video/mp4">
-    Twój przeglądarka nie obsługuje wideo 😢
-  </video>
-
   <div class="centered-text typing">
     Kocham Cię bardzo mocno ❤️
   </div>
 
 </body>
 </html>
+
 
 
