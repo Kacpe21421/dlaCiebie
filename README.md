@@ -14,19 +14,18 @@
     html, body {
       height: 100%;
       font-family: 'Courier New', monospace;
-      background: black;
-      color: white;
+      background: radial-gradient(circle at center, #1a1a1a, #000000);
       overflow: hidden;
+      color: white;
     }
 
     .centered-text {
       position: absolute;
-      top: 50%;
+      top: 45%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 2.2rem;
+      font-size: 6vw;
       text-align: center;
-      animation: fadeIn 2s ease-in-out;
       white-space: nowrap;
       overflow: hidden;
       border-right: 2px solid white;
@@ -42,17 +41,6 @@
     @keyframes blink-caret {
       from, to { border-color: transparent }
       50% { border-color: white; }
-    }
-
-    @keyframes shoot {
-      0% {
-        opacity: 1;
-        transform: translateY(0) scale(1) rotate(45deg);
-      }
-      100% {
-        transform: translateY(-200px) scale(0.5) rotate(360deg);
-        opacity: 0;
-      }
     }
 
     .heart {
@@ -89,12 +77,37 @@
       position: fixed;
       bottom: 10px;
       left: 10px;
+      width: 120px;
+      z-index: 99;
+    }
+
+    .gif2 {
+      position: fixed;
+      bottom: 20px;
+      right: 10px;
       width: 140px;
       z-index: 99;
     }
 
     .tenor-gif-embed {
       width: 100%;
+    }
+
+    @keyframes background-fade {
+      0% { background: radial-gradient(circle at center, #1a1a1a, #000000); }
+      50% { background: radial-gradient(circle at center, #ff0077, #1a001a); }
+      100% { background: radial-gradient(circle at center, #1a1a1a, #000000); }
+    }
+
+    body {
+      animation: background-fade 8s infinite ease-in-out;
+    }
+
+    @media (max-width: 600px) {
+      .centered-text {
+        font-size: 8vw;
+        top: 40%;
+      }
     }
   </style>
 </head>
@@ -117,6 +130,9 @@
     </div>
   </div>
 
+  <!-- Twój drugi gif -->
+  <img src="actividades (1).gif" alt="gif" class="gif2" />
+
   <!-- Tenor script -->
   <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
@@ -138,6 +154,7 @@
   </script>
 </body>
 </html>
+
 
 
 
