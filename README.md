@@ -101,7 +101,7 @@
     }
 
     .accordion-toggle {
-      width: 50%;
+      width: 100%;
       padding: 15px 20px;
       font-size: 1.2rem;
       background: #fff;
