@@ -113,7 +113,6 @@
   </style>
 </head>
 <body>
-  <h2>Dla Ciebie 🐾</h2>
   <h1>Kocham Cię bardzo ❤️</h1>
   <p>Jesteś moją najważniejszą osobą. Cieszę się, że jesteś. Ta strona to tylko mały ułamek tego, co dla mnie znaczysz.</p>
 
