@@ -1,12 +1,18 @@
+
 <html lang="pl">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dla Ciebie ❤️</title>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Inter:wght@400;700&display=swap');
 
     body {
       margin: 0;
       padding: 0;
-      background: radial-gradient(circle at center, #ffdde1, #ee9ca7);
+      background: url('77cbba78-463a-447f-8344-a6a5d3d409bb.png') no-repeat center center fixed;
+      background-size: cover;
       font-family: 'Inter', sans-serif;
       color: #fff;
       height: 100vh;
@@ -14,46 +20,27 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      overflow: hidden;
       text-align: center;
-    }
-
-    h1, h2 {
-      font-family: 'Sacramento', cursive;
-      margin: 10px 0;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-      animation: fadeInDown 2s ease-out;
+      overflow: hidden;
     }
 
     h1 {
+      font-family: 'Sacramento', cursive;
       font-size: 4rem;
-    }
-
-    h2 {
-      font-size: 3rem;
-      animation: fadeInUp 3s ease-out;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      animation: fadeInDown 2s ease-out;
+      margin-bottom: 10px;
     }
 
     p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      text-align: center;
-      animation: fadeInUp 3s ease-out;
+      font-size: 1.3rem;
       color: #fff;
-      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+      animation: fadeInUp 3s ease-out;
+      margin-bottom: 30px;
     }
-<div class="accordion-container">
-  <button class="accordion-toggle">Dlaczego Cię kocham? 💖</button>
-  <div class="accordion-content">
-    <ul>
-      <li>Bo zawsze potrafisz mnie rozśmieszyć nawet w najgorszy dzień.</li>
-      <li>Bo jesteś najczulszą i najpiękniejszą duszą, jaką spotkałem.</li>
-      <li>Bo przy Tobie wszystko ma sens – nawet zwykła cisza.</li>
-      <li>Bo potrafisz kochać tak, jak nikt inny na tym świecie.</li>
-      <li>Bo jesteś po prostu Ty – i to wystarczy. 🥺</li>
-    </ul>
-  </div>
-</div>
 
     @keyframes fadeInDown {
       0% { opacity: 0; transform: translateY(-50px); }
@@ -107,73 +94,71 @@
       }
     }
 
-    .confetti {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      background-color: red;
-      animation: confettiFall 3s linear forwards;
-      opacity: 0.9;
-      border-radius: 50%;
-      z-index: 9999;
-    }
-
-    @keyframes confettiFall {
-      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
-      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
-    }
     .accordion-container {
-  margin-top: 30px;
-  width: 80%;
-  max-width: 600px;
-}
+      margin-top: 10px;
+      width: 90%;
+      max-width: 600px;
+    }
 
-.accordion-toggle {
-  width: 100%;
-  padding: 15px 20px;
-  font-size: 1.2rem;
-  background: #fff;
-  color: #d94f70;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background 0.3s ease;
-}
+    .accordion-toggle {
+      width: 100%;
+      padding: 15px 20px;
+      font-size: 1.2rem;
+      background: #fff;
+      color: #d94f70;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
 
-.accordion-toggle:hover {
-  background: #ffe4ec;
-}
+    .accordion-toggle:hover {
+      background: #ffe4ec;
+    }
 
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  margin-top: 10px;
-  padding: 0 20px;
-}
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      margin-top: 10px;
+      padding: 0 20px;
+    }
 
-.accordion-content ul {
-  list-style: none;
-  padding: 15px 0;
-  margin: 0;
-  color: #fff;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.3);
-}
+    .accordion-content ul {
+      list-style: none;
+      padding: 15px 0;
+      margin: 0;
+      color: #fff;
+      text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    }
 
-.accordion-content li {
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
+    .accordion-content li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
   </style>
 </head>
+
 <body>
   <h1>Kocham Cię bardzo ❤️</h1>
   <p>Jesteś moją najważniejszą osobą. Cieszę się, że jesteś. Ta strona to tylko mały ułamek tego, co dla mnie znaczysz.</p>
+
+  <div class="accordion-container">
+    <button class="accordion-toggle">Dlaczego Cię kocham? 💖</button>
+    <div class="accordion-content">
+      <ul>
+        <li>Bo zawsze potrafisz mnie rozśmieszyć nawet w najgorszy dzień.</li>
+        <li>Bo jesteś najczulszą i najpiękniejszą duszą, jaką spotkałem.</li>
+        <li>Bo przy Tobie wszystko ma sens – nawet zwykła cisza.</li>
+        <li>Bo potrafisz kochać tak, jak nikt inny na tym świecie.</li>
+        <li>Bo jesteś po prostu Ty – i to wystarczy. 🥺</li>
+      </ul>
+    </div>
+  </div>
 
   <script>
     function createHeart() {
@@ -185,23 +170,14 @@
       document.body.appendChild(heart);
       setTimeout(() => heart.remove(), 10000);
     }
+
     setInterval(createHeart, 300);
 
-    function launchConfetti() {
-      for (let i = 0; i < 100; i++) {
-        const confetti = document.createElement('div');
-        confetti.classList.add('confetti');
-        confetti.style.left = Math.random() * 100 + 'vw';
-        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
-        confetti.style.width = `${5 + Math.random() * 5}px`;
-        confetti.style.height = `${5 + Math.random() * 5}px`;
-        confetti.style.animationDuration = `${2 + Math.random() * 2}s`;
-        document.body.appendChild(confetti);
-        setTimeout(() => confetti.remove(), 4000);
-      }
-    }
-
-    window.onload = launchConfetti;
+    // Akordeon
+    document.querySelector('.accordion-toggle').addEventListener('click', () => {
+      const content = document.querySelector('.accordion-content');
+      content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+    });
   </script>
 
   <audio autoplay loop>
@@ -209,12 +185,6 @@
   </audio>
 </body>
 </html>
-// Akordeon
-document.querySelector('.accordion-toggle').addEventListener('click', () => {
-  const content = document.querySelector('.accordion-content');
-  content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
-});
-
 
 
 
