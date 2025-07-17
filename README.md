@@ -6,7 +6,7 @@
     body {
       margin: 0;
       padding: 0;
-      background: url('https://i.imgur.com/B3ZQjGt.jpg') center center / cover no-repeat fixed;
+      background: radial-gradient(circle at center, #ffdde1, #ee9ca7);
       font-family: 'Inter', sans-serif;
       color: #fff;
       height: 100vh;
@@ -20,10 +20,13 @@
 
     h1, h2 {
       font-family: 'Sacramento', cursive;
-      font-size: 4rem;
       margin: 10px 0;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
       animation: fadeInDown 2s ease-out;
+    }
+
+    h1 {
+      font-size: 4rem;
     }
 
     h2 {
@@ -36,7 +39,7 @@
       max-width: 600px;
       text-align: center;
       animation: fadeInUp 3s ease-out;
-      color: #fefefe;
+      color: #fff;
       text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
     }
 
