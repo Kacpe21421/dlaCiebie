@@ -1,7 +1,6 @@
 
 <html lang="pl">
 <head>
-
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Inter:wght@400;700&display=swap');
 
@@ -87,6 +86,22 @@
         opacity: 0;
       }
     }
+
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      animation: confettiFall 3s linear forwards;
+      opacity: 0.9;
+      border-radius: 50%;
+      z-index: 9999;
+    }
+
+    @keyframes confettiFall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
   </style>
 </head>
 <body>
@@ -103,8 +118,24 @@
       document.body.appendChild(heart);
       setTimeout(() => heart.remove(), 10000);
     }
-
     setInterval(createHeart, 300);
+
+    // KONFETTI
+    function launchConfetti() {
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
+        confetti.style.width = `${5 + Math.random() * 5}px`;
+        confetti.style.height = `${5 + Math.random() * 5}px`;
+        confetti.style.animationDuration = `${2 + Math.random() * 2}s`;
+        document.body.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 4000);
+      }
+    }
+
+    window.onload = launchConfetti;
   </script>
 
   <audio autoplay loop>
@@ -112,7 +143,6 @@
   </audio>
 </body>
 </html>
-
 
 
 
