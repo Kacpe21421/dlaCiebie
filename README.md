@@ -11,8 +11,7 @@
     body {
       margin: 0;
       padding: 0;
-      background: url('77cbba78-463a-447f-8344-a6a5d3d409bb.png') no-repeat center center fixed;
-      background-size: cover;
+      background: linear-gradient(135deg, #f7b1c3, #fcd2e2);
       font-family: 'Inter', sans-serif;
       color: #fff;
       height: 100vh;
@@ -21,7 +20,7 @@
       align-items: center;
       flex-direction: column;
       text-align: center;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     h1 {
@@ -134,11 +133,12 @@
       margin: 0;
       color: #fff;
       text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
 
     .accordion-content li {
       margin-bottom: 10px;
-      line-height: 1.6;
     }
   </style>
 </head>
