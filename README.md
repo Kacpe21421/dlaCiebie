@@ -1,4 +1,3 @@
-
 <html lang="pl">
 <head>
   <style>
@@ -7,32 +6,38 @@
     body {
       margin: 0;
       padding: 0;
-      background: radial-gradient(circle at center, #ffdde1, #ee9ca7);
+      background: url('https://i.imgur.com/B3ZQjGt.jpg') center center / cover no-repeat fixed;
       font-family: 'Inter', sans-serif;
-      color: #333;
+      color: #fff;
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       overflow: hidden;
+      text-align: center;
     }
 
-    h1 {
+    h1, h2 {
       font-family: 'Sacramento', cursive;
       font-size: 4rem;
-      color: #fff;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      margin-bottom: 10px;
+      margin: 10px 0;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
       animation: fadeInDown 2s ease-out;
     }
 
+    h2 {
+      font-size: 3rem;
+      animation: fadeInUp 3s ease-out;
+    }
+
     p {
-      font-size: 1.3rem;
-      color: #fff;
-      max-width: 500px;
+      font-size: 1.2rem;
+      max-width: 600px;
       text-align: center;
       animation: fadeInUp 3s ease-out;
+      color: #fefefe;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
     }
 
     @keyframes fadeInDown {
@@ -105,8 +110,9 @@
   </style>
 </head>
 <body>
-  <h1>Kocham cię bardzoo ❤️</h1>
-  <p>W całym internecie, na całym świecie – tylko Ty jesteś moim wszechświatem.</p>
+  <h2>Dla Ciebie 🐾</h2>
+  <h1>Kocham Cię bardzo ❤️</h1>
+  <p>Jesteś moją najważniejszą osobą. Cieszę się, że jesteś. Ta strona to tylko mały ułamek tego, co dla mnie znaczysz.</p>
 
   <script>
     function createHeart() {
@@ -120,7 +126,6 @@
     }
     setInterval(createHeart, 300);
 
-    // KONFETTI
     function launchConfetti() {
       for (let i = 0; i < 100; i++) {
         const confetti = document.createElement('div');
