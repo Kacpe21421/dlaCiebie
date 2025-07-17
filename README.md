@@ -42,6 +42,18 @@
       color: #fff;
       text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
     }
+<div class="accordion-container">
+  <button class="accordion-toggle">Dlaczego Cię kocham? 💖</button>
+  <div class="accordion-content">
+    <ul>
+      <li>Bo zawsze potrafisz mnie rozśmieszyć nawet w najgorszy dzień.</li>
+      <li>Bo jesteś najczulszą i najpiękniejszą duszą, jaką spotkałem.</li>
+      <li>Bo przy Tobie wszystko ma sens – nawet zwykła cisza.</li>
+      <li>Bo potrafisz kochać tak, jak nikt inny na tym świecie.</li>
+      <li>Bo jesteś po prostu Ty – i to wystarczy. 🥺</li>
+    </ul>
+  </div>
+</div>
 
     @keyframes fadeInDown {
       0% { opacity: 0; transform: translateY(-50px); }
@@ -110,6 +122,53 @@
       0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
       100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
     }
+    .accordion-container {
+  margin-top: 30px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.accordion-toggle {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  background: #fff;
+  color: #d94f70;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.accordion-toggle:hover {
+  background: #ffe4ec;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.accordion-content ul {
+  list-style: none;
+  padding: 15px 0;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+
+.accordion-content li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
   </style>
 </head>
 <body>
@@ -150,6 +209,11 @@
   </audio>
 </body>
 </html>
+// Akordeon
+document.querySelector('.accordion-toggle').addEventListener('click', () => {
+  const content = document.querySelector('.accordion-content');
+  content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+});
 
 
 
