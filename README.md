@@ -122,17 +122,19 @@
       transform: scale(1.03);
     }
 
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 16px;
-      margin-top: 12px;
-      padding: 0 20px;
-      backdrop-filter: blur(5px);
-      width: 100%;
-    }
+   .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background: rgba(255, 255, 255, 0.2); /* trochę bardziej jednolite */
+  border-radius: 20px;
+  margin-top: 12px;
+  padding: 0 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* dodany cień */
+  width: 100%;
+}
+
 
     .accordion-content ul {
       list-style: none;
