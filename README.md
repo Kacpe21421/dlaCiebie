@@ -1,4 +1,5 @@
 
+
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
@@ -14,11 +15,11 @@
       background: linear-gradient(135deg, #f7b1c3, #fcd2e2);
       font-family: 'Inter', sans-serif;
       color: #fff;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
       text-align: center;
       overflow-x: hidden;
     }
@@ -94,44 +95,44 @@
     }
 
     .accordion-container {
-  margin-top: 10px;
-  width: 90%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      max-width: 600px;
+      margin: 20px auto 0 auto;
+    }
 
-.accordion-toggle {
-  width: auto;
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  background: rgba(255, 255, 255, 0.25);
-  color: #d94f70;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  transition: background 0.3s ease, transform 0.2s ease;
-  backdrop-filter: blur(6px);
-}
+    .accordion-toggle {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background: rgba(255, 255, 255, 0.25);
+      color: #d94f70;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: background 0.3s ease, transform 0.2s ease;
+      backdrop-filter: blur(6px);
+    }
 
-.accordion-toggle:hover {
-  background: rgba(255, 255, 255, 0.4);
-  transform: scale(1.03);
-}
+    .accordion-toggle:hover {
+      background: rgba(255, 255, 255, 0.4);
+      transform: scale(1.03);
+    }
 
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  margin-top: 12px;
-  padding: 0 20px;
-  backdrop-filter: blur(5px);
-}
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      margin-top: 12px;
+      padding: 0 20px;
+      backdrop-filter: blur(5px);
+      width: 100%;
+    }
 
     .accordion-content ul {
       list-style: none;
@@ -191,6 +192,3 @@
   </audio>
 </body>
 </html>
-
-
-
