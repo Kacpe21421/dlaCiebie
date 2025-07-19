@@ -163,7 +163,7 @@ p::after {
 
 <body>
   <h1>Kocham Cię bardzo ❤️</h1>
-  <p>Twoje oczy są moim niebem, Twój głos moim spokojem. Trzymam Cię w sercu, bo jesteś tym, czego szukałem przez całe życie.</p>
+  <p>Twoje oczy są moim niebem, Twój głos moim spokojem. Trzymam Cię w serduszku, bo jesteś tym, czego szukałem przez całe życie.</p>
 
   <div class="accordion-container">
     <button class="accordion-toggle">Dlaczego Cię kocham? 💖</button>
