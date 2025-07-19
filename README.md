@@ -38,7 +38,7 @@
     }
 
     p {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       color: #fff;
       max-width: 600px;
       text-shadow: 0 1px 3px rgba(0,0,0,0.4);
