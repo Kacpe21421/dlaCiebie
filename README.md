@@ -1,5 +1,4 @@
-
-
+<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
@@ -9,28 +8,25 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Inter:wght@400;700&display=swap');
 
- html, body { 
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background: linear-gradient(to bottom, #f7b1c3 0%, #fcd2e2 100%);
-  background-attachment: fixed;
-}
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: linear-gradient(135deg, #f7b1c3, #fcd2e2);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom, #f7b1c3 0%, #fcd2e2 100%);
-  font-family: 'Inter', sans-serif;
-  color: #fff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow-x: hidden;
-}
+    body {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
     h1 {
       font-family: 'Sacramento', cursive;
@@ -58,6 +54,53 @@ body {
     @keyframes fadeInUp {
       0% { opacity: 0; transform: translateY(50px); }
       100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .accordion-container {
+      width: 90%;
+      max-width: 600px;
+    }
+
+    .accordion-toggle {
+      width: 100%;
+      padding: 15px 20px;
+      font-size: 1.2rem;
+      background: #fff;
+      color: #d94f70;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    .accordion-toggle:hover {
+      background: #ffe4ec;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      margin-top: 10px;
+      padding: 0 20px;
+    }
+
+    .accordion-content ul {
+      list-style: none;
+      padding: 15px 0;
+      margin: 0;
+      color: #fff;
+      text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .accordion-content li {
+      margin-bottom: 10px;
     }
 
     .heart {
@@ -100,62 +143,6 @@ body {
         transform: translateY(-10vh) rotate(45deg);
         opacity: 0;
       }
-    }
-
-    .accordion-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 90%;
-      max-width: 600px;
-      margin: 20px auto 0 auto;
-    }
-
-    .accordion-toggle {
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      background: rgba(255, 255, 255, 0.25);
-      color: #d94f70;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-      transition: background 0.3s ease, transform 0.2s ease;
-      backdrop-filter: blur(6px);
-    }
-
-    .accordion-toggle:hover {
-      background: rgba(255, 255, 255, 0.4);
-      transform: scale(1.03);
-    }
-
-   .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-  background: rgba(255, 255, 255, 0.2); /* trochę bardziej jednolite */
-  border-radius: 20px;
-  margin-top: 12px;
-  padding: 0 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* dodany cień */
-  width: 100%;
-}
-
-
-    .accordion-content ul {
-      list-style: none;
-      padding: 15px 0;
-      margin: 0;
-      color: #fff;
-      text-shadow: 0 1px 5px rgba(0,0,0,0.3);
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    .accordion-content li {
-      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -202,3 +189,4 @@ body {
   </audio>
 </body>
 </html>
+
