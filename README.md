@@ -9,20 +9,28 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Inter:wght@400;700&display=swap');
 
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #f7b1c3 0%, #fcd2e2 100%);
-      font-family: 'Inter', sans-serif;
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      overflow-x: hidden;
-    }
+ html, body { 
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, #f7b1c3 0%, #fcd2e2 100%);
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f7b1c3 0%, #fcd2e2 100%);
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow-x: hidden;
+}
 
     h1 {
       font-family: 'Sacramento', cursive;
