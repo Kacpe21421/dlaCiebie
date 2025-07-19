@@ -150,9 +150,12 @@
         transform: translateY(-10vh) rotate(45deg);
         opacity: 0;
       }
-      hr {
-  display: none;
-  border: none;
+ h1::before,
+h1::after,
+p::before,
+p::after {
+  content: none !important;
+  display: none !important;
 }
     }
   </style>
