@@ -162,7 +162,7 @@ p::after {
 </head>
 
 <body>
-  <h1>Kocham Cię bardzo ❤️</h1>
+  <h1>❤️ Kocham Cię bardzo ❤️</h1>
   <p>Twoje oczy są moim niebem, Twój głos moim spokojem. Trzymam Cię w serduszku, bo jesteś tym, czego szukałem przez całe życie.</p>
 
   <div class="accordion-container">
