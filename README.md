@@ -12,7 +12,7 @@
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #f7b1c3, #fcd2e2);
+      background: linear-gradient(to bottom, #f7b1c3 0%, #fcd2e2 100%);
       font-family: 'Inter', sans-serif;
       color: #fff;
       min-height: 100vh;
