@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
@@ -12,7 +12,7 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      background: linear-gradient(135deg, #f7b1c3, #000000);
+      background: linear-gradient(135deg, #000000, #000000);
       background-repeat: no-repeat;
       background-attachment: fixed;
       font-family: 'Inter', sans-serif;
