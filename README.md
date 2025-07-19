@@ -46,6 +46,10 @@
       margin-bottom: 30px;
     }
 
+    hr {
+  border: 1px solid #000;
+}
+
     @keyframes fadeInDown {
       0% { opacity: 0; transform: translateY(-50px); }
       100% { opacity: 1; transform: translateY(0); }
